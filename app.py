@@ -15,7 +15,6 @@ class InferlessPythonModel:
         self.pipe = StableDiffusionInpaintPipeline.from_pretrained(
             "runwayml/stable-diffusion-inpainting",
             torch_dtype=torch.float16,
-            device_map="auto",
         )
 
     def infer(self, inputs):
